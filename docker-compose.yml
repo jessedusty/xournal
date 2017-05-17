@@ -1,0 +1,11 @@
+version: '2'
+services:
+  xournal:
+    image: jessedusty/xournal
+    build: .
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.xournal:/root/.xournal
+    environment:
+      # - DISPLAY=$DISPLAY
+      - DISPLAY=10.0.0.222:0
